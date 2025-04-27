@@ -1,0 +1,344 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #000;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow-y: auto; /* 🛑🛑🛑 ADD THIS LINE */
+}
+
+
+/* Sidebar hidden */
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+/* Profile inside sidebar */
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Toggle Button */
+#toggleSidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #1DB954;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+#toggleSidebar:hover {
+  background: #17a74a;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin-left: 220px;
+  padding: 2rem;
+  transition: margin-left 0.3s ease, padding 0.3s ease;
+}
+
+.main-content.fullwidth {
+  margin-left: 0; /* ✅ remove the sidebar margin */
+  padding: 2rem;
+}
+
+
+/* Main Header */
+.main-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1DB954;
+}
+
+.main-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Playlist Section */
+.playlist {
+  padding: 2rem;
+  transition: padding 0.3s ease;
+}
+
+/* Apply padding change for all playlists correctly */
+.main-content.fullwidth .playlist {
+  padding-left: 0;
+  padding-right: 0; /* <-- add this too for symmetry */
+}
+
+
+.playlist h2 {
+  margin-bottom: 1rem;
+  color: #1DB954;
+}
+
+/* Songs Grid */
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.song-card {
+  background: #181818;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+  background: #282828;
+}
+
+.song-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.song-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.song-card button {
+  background-color: #1DB954;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.song-card button:hover {
+  background-color: #1ed760;
+}
+
+/* Footer - Music Player */
+footer {
+  background: #181818;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Songs Slider */
+.songs-slider {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+}
+
+.songs-track {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+/* Hide scrollbar nicely */
+.songs-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.songs-slider::-webkit-scrollbar-thumb {
+  background: #1DB954;
+  border-radius: 4px;
+}
+
+.songs-slider::-webkit-scrollbar-track {
+  background: #181818;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: #181818;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #1DB954;
+  color: #000;
+}
+.song-card img {
+  width: 120px;  /* Set a fixed width for the image */
+  height: 120px;  /* Set the height to match the width, making the image square */
+  object-fit: cover;  /* Ensure the image fills the area without distorting */
+  border-radius: 0.5rem;  /* Optional: rounded corners for the image */
+}
+
+/* Sidebar Audio Player Styles */
+/* Sidebar Audio Player Styles */
+.audio-player {
+  margin-top: 2rem;
+  color: #fff;
+  background: #181818;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.audio-player h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.audio-player audio {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.progress-container {
+  margin-top: 1rem;
+}
+
+#progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #333;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+#progressBar::-webkit-slider-runnable-track {
+  background: #333;
+  height: 8px;
+  border-radius: 5px;
+}
+
+#progressBar::-webkit-slider-thumb {
+  background: #1DB954;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.audio-controls button {
+  background-color: #1DB954;
+  border: none;
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  width: 60px;
+  height: 60px;
+}
+
+.audio-controls button:hover {
+  background-color: #1ed760;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+}
+
+#volumeControl {
+  width: 120px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+#volumeControl::-webkit-slider-runnable-track {
+  background: #333;
+  height: 8px;
+  border-radius: 5px;
+}
+
+#volumeControl::-webkit-slider-thumb {
+  background: #1DB954;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* Main page song items */
+.song-item {
+  text-align: center;
+  margin: 1rem;
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.song-item:hover {
+  transform: scale(1.05);
+}
+

@@ -1,0 +1,217 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Playlist 🎶</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button id="toggleSidebar">☰</button>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      
+
+      <div class="profile">
+        <div><br><br><br><br></div>
+        <img src="hello kitty.jpg" alt="Your Picture">
+        <h3>Hey, Aadya!</h3>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="#remind">Songs That Remind Me of You</a></li>
+              <li><a href="#latenight">Late Night Feels</a></li>
+              <li><a href="#roadtrip">Roadtrip With You</a></li>
+            </ul>
+      </nav>
+  <!-- Sidebar Audio Player -->
+  <div class="audio-player">
+    <p>Now Playing:</p>
+    <h4 id="nowPlayingTitle">Nothing playing...</h4>
+    
+    <!-- Audio Element -->
+    <audio id="audioPlayer" controls>
+      <source id="audioSource" src="" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <input type="range" id="progressBar" value="0" max="100" step="0.1" onchange="seekSong()" />
+    </div>
+    
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+      <button onclick="togglePlayPause()" id="playPauseBtn">
+        ▶ Play
+      </button>
+      
+      <div class="volume-control">
+        <input type="range" id="volumeControl" value="100" max="100" onchange="changeVolume()" />
+      </div>
+    </div>
+  </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Toggle Sidebar Button -->
+
+      <header class="main-header">
+        <h1>🎵 Our Special Playlists 🎵</h1>
+        <p>Made with Love for You 💖</p>
+      </header>
+
+      <main>
+
+        <section class="playlist" id="remind">
+          <h2>Songs That Remind Me of You</h2>
+          <div class="songs-slider">
+            <div class="songs-track">
+              <div class="song-card">
+                <img src="thinkinabouutyou.jpg" alt="Thinkin Bout You">
+                <h3>thinkin about you</h3>
+                <button onclick="playSong('Thinkin Bout You.mp3', 'Thinkin Bout You')">▶ Play</button>
+                <audio id="audioPlayer" src="Thinkin Bout You.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="herewithme.jpg" alt="Here With Me">
+                <h3>Here With Me</h3>
+                <button onclick="playSong('d4vd - Here With Me (Official Audio).mp3', 'Here With Me')">▶ Play</button>
+                <audio id="audioPlayer" src="d4vd - Here With Me (Official Audio).mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="you.jpg" alt="you">
+                <h3>you</h3>
+                <button onclick="playSong('You (feat. Travis Scott).mp3', 'you')">▶ Play</button>
+                <audio id="audioPlayer" src="You (feat. Travis Scott).mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="apocalypse.jpg" alt="apocalypse">
+                <h3>Apocalypse</h3>
+                <button onclick="playSong('Apocalypse - Cigarettes After Sex.mp3', 'apocalypse')">▶ Play</button>
+                <audio id="audioPlayer" src="Apocalypse - Cigarettes After Sex.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="loversrock.jpg" alt="Thinkin Bout You">
+                <h3>Lovers Rock</h3>
+                <button onclick="playSong('Lovers Rock.mp3', 'Lovers Rock')">▶ Play</button>
+                <audio id="audioPlayer" src="Lovers Rock.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="mykindofwomen.jpg" alt="My Kind Of Woman">
+                <h3>My Kind Of Woman</h3>
+                <button onclick="playSong('Mac DeMarco  My Kind Of Woman.mp3', 'My Kind Of Woman')">▶ Play</button>
+                <audio id="audioPlayer" src="Mac DeMarco  My Kind Of Woman.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="505.jpg" alt="505">
+                <h3>505</h3>
+                <button onclick="playSong('505.mp3', '505')">▶ Play</button>
+                <audio id="audioPlayer" src="505.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="Don Toliver - Thinking Bout You .jpg" alt="Don Toliver - Thinking Bout You">
+                <h3>Don Toliver - Thinking Bout You</h3>
+                <button onclick="playSong('Don Toliver - Thinking Bout You (Unreleased).mp3', '505')">▶ Play</button>
+                <audio id="audioPlayer" src="Don Toliver - Thinking Bout You (Unreleased).mp3"></audio>
+              </div>
+              
+             
+              
+                
+            </div>
+          </div>
+        </section>
+        <section class="playlist" id="remind">
+          <h2>late night feels</h2>
+          <div class="songs-slider">
+            <div class="songs-track">
+              <div class="song-card">
+                <img src="Sunset Rollercoaster.jpg" alt="Sunset Rollercoaster">
+                <h3>Sunset Rollercoaster</h3>
+                <button onclick="playSong('Sunset Rollercoaster - Let There Be Light Again (Single), 2021.mp3', 'Sunset Rollercoaster')">▶ Play</button>
+                <audio id="audioPlayer" src="Sunset Rollercoaster - Let There Be Light Again (Single), 2021.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="Infrunami.jpg" alt="Infrunami">
+                <h3>Here With Me</h3>
+                <button onclick="playSong('Infrunami.mp3', 'Infrunami')">▶ Play</button>
+                <audio id="audioPlayer" src="Infrunami.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="Sweater Weather.jpg" alt="Sweater Weather">
+                <h3>Sweater Weather</h3>
+                <button onclick="playSong('Sweater Weather.mp3', 'Sweater Weather')">▶ Play</button>
+                <audio id="audioPlayer" src="Sweater Weather.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="Vierre Cloud - moment (Official Audio).jpg" alt="Vierre Cloud - moment (Official Audio)">
+                <h3>Vierre Cloud - moment</h3>
+                <button onclick="playSong('Vierre Cloud - moment (Official Audio).mp3', 'Vierre Cloud - moment (Official Audio)')">▶ Play</button>
+                <audio id="audioPlayer" src="Vierre Cloud - moment (Official Audio).mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="Eyedress & Dent May - Something About You.jpg" alt="Eyedress & Dent May - Something About You">
+                <h3>Something About You</h3>
+                <button onclick="playSong('Eyedress & Dent May - Something About You.mp3', 'Eyedress & Dent May - Something About You')">▶ Play</button>
+                <audio id="audioPlayer" src=".mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="The Marías - No One Noticed (Audio).jpg" alt="The Marías - No One Noticed (Audio)">
+                <h3>No One Noticed</h3>
+                <button onclick="playSong('The Marías - No One Noticed (Audio).mp3', 'The Marías - No One Noticed (Audio)')">▶ Play</button>
+                <audio id="audioPlayer" src="The Marías - No One Noticed (Audio).mp3"></audio>
+              </div>
+                
+            </div>
+          </div>
+        </section>
+        <section class="playlist" id="remind">
+          <h2>Roadtrip With You</h2>
+          <div class="songs-slider">
+            <div class="songs-track">
+              <div class="song-card">
+                <img src="HYBS - Tip Toe  Official Audio.jpg" alt="HYBS - Tip Toe  Official Audio">
+                <h3>Tip Toe </h3>
+                <button onclick="playSong('HYBS - Tip Toe Official Audio.mp3', 'HYBS - Tip Toe  Official Audio')">▶ Play</button>
+                <audio id="audioPlayer" src="HYBS - Tip Toe Official Audio.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="Masego, Don Toliver - Mystery Lady (Visualizer).jpg" alt="Masego, Don Toliver - Mystery Lady (Visualizer)">
+                <h3>Mystery Lady</h3>
+                <button onclick="playSong('Masego, Don Toliver - Mystery Lady (Visualizer).mp3', 'Masego, Don Toliver - Mystery Lady (Visualizer)')">▶ Play</button>
+                <audio id="audioPlayer" src="Masego, Don Toliver - Mystery Lady (Visualizer).mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="Fell In Luv.jpg" alt="Fell In Luv">
+                <h3>Fell In Luv</h3>
+                <button onclick="playSong('Fell In Luv.mp3', 'Fell In Luv')">▶ Play</button>
+                <audio id="audioPlayer" src="Fell In Luv.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="Clairo - Pretty Girl.jpg" alt="Clairo - Pretty Girl">
+                <h3>Clairo - Pretty Girl</h3>
+                <button onclick="playSong('Clairo - Pretty Girl.mp3', 'Clairo - Pretty Girl')">▶ Play</button>
+                <audio id="audioPlayer" src="Clairo - Pretty Girl.mp3"></audio>
+              </div>
+              <div class="song-card">
+                <img src="ya salam.jpg" alt="ya salam">
+                <h3>ya salam</h3>
+                <button onclick="playSong('marwan moussa - ya salam (el waili remix).mp3', '505')">▶ Play</button>
+                <audio id="audioPlayer" src="marwan moussa - ya salam (el waili remix).mp3"></audio>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+
+      </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+  </html>
